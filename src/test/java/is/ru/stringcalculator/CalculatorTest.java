@@ -36,6 +36,12 @@ public class CalculatorTest {
       }
 
 
+      @Test(expected = IllegalArgumentException.class)
+      public void testNegative() {
+          Calculator.add("-2,2,-3");
+      }
+
+
 
 
 
