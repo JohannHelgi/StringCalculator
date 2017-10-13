@@ -20,6 +20,11 @@ public class CalculatorTest {
           assertEquals(8, Calculator.add("4,4"));
       }
 
+      @Test
+      public void testAddMoreNumbers() {
+          assertEquals(12, Calculator.add("4,4,4"));
+      }
+
 
 
 
