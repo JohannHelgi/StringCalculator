@@ -6,12 +6,21 @@ import org.junit.Test;
 public class CalculatorTest {
 
       @Test
-      public void testEmptyString(){
-          assertEquals(0,Calculator.add(""));
+     public void testEmptyString() {
+          assertEquals(0, Calculator.add(""));
       }
 
-      public void testOneNumber(){
-        assertEquals(1, Calculator.add("1"));
+      @Test
+      public void testOneNumber() {
+          assertEquals(8, Calculator.add("8"));
       }
+
+      @Test
+      public void testAddNumbers() {
+          assertEquals(8, Calculator.add("4,4"));
+      }
+
+
+
 
 }
