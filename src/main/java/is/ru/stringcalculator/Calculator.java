@@ -2,6 +2,7 @@ package is.ru.stringcalculator;
 
 public class Calculator {
 
+
       public static int add (String text) {
           if (text.equals("")) {
               return 0;
@@ -19,7 +20,10 @@ public class Calculator {
                 checkNegative(text, "\n|,");
                 return addNumbers(splitString(text, "\n|,"));
           }
-          else return toInt(text);
+          else{
+            checkNegative(text," ");
+            return toInt(text);
+          }
       }
 
       public static String[] splitString(String text, String delimeter) {
@@ -37,8 +41,10 @@ public class Calculator {
                     negative = negative + number +", ";
                 }
             }
-            negative = negative.substring(0, negative.length() - 2);
-            System.out.println("Negatives not allowed: " + negative);
+            if (negative.endsWith(", ")) {
+                negative = negative.substring(0, negative.length() - 2);
+            }
+            System.out.println(negative);
             throw new IllegalArgumentException("Negatives not allowed: " + negative);
 
           }

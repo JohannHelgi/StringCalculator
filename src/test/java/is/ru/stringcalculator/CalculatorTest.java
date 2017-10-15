@@ -37,9 +37,13 @@ public class CalculatorTest {
 
 
       @Test(expected = IllegalArgumentException.class)
+      public void testOneNegative() {
+          Calculator.add("-1");
+      }
+
+      @Test(expected = IllegalArgumentException.class)
       public void testNegative() {
           Calculator.add("-2,2,-3");
-          Calculator.add("-1");
       }
 
       @Test

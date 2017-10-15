@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="is.ru.stringcalculator.CalculatorTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2017-10-15T17:47:41" hostname="SurfaceBook" time="0.008">
+<testsuite name="is.ru.stringcalculator.CalculatorTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2017-10-15T18:04:12" hostname="SurfaceBook" time="0.006">
   <properties/>
-  <testcase name="testAddNumbers" classname="is.ru.stringcalculator.CalculatorTest" time="0.003"/>
-  <testcase name="testBigNumbers" classname="is.ru.stringcalculator.CalculatorTest" time="0.001"/>
+  <testcase name="testAddNumbers" classname="is.ru.stringcalculator.CalculatorTest" time="0.002"/>
+  <testcase name="testBigNumbers" classname="is.ru.stringcalculator.CalculatorTest" time="0.0"/>
   <testcase name="testDelimeter" classname="is.ru.stringcalculator.CalculatorTest" time="0.0"/>
-  <testcase name="testAddMoreNumbers" classname="is.ru.stringcalculator.CalculatorTest" time="0.0"/>
+  <testcase name="testOneNegative" classname="is.ru.stringcalculator.CalculatorTest" time="0.0"/>
+  <testcase name="testAddMoreNumbers" classname="is.ru.stringcalculator.CalculatorTest" time="0.001"/>
   <testcase name="testEmptyString" classname="is.ru.stringcalculator.CalculatorTest" time="0.0"/>
   <testcase name="testNewLineAndComma" classname="is.ru.stringcalculator.CalculatorTest" time="0.0"/>
   <testcase name="testNewLine" classname="is.ru.stringcalculator.CalculatorTest" time="0.0"/>
-  <testcase name="testBigNumber" classname="is.ru.stringcalculator.CalculatorTest" time="0.0"/>
+  <testcase name="testBigNumber" classname="is.ru.stringcalculator.CalculatorTest" time="0.001"/>
   <testcase name="testNegative" classname="is.ru.stringcalculator.CalculatorTest" time="0.0"/>
   <testcase name="testOneNumber" classname="is.ru.stringcalculator.CalculatorTest" time="0.0"/>
-  <system-out><![CDATA[Negatives not allowed: -2, -3
+  <system-out><![CDATA[-1
+-2, -3
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
