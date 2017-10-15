@@ -10,39 +10,39 @@ public class Calculator {
               int index = text.indexOf("\n");
               String delimeter = text.substring(2,index);
               String substring = text.substring(index + 1);
-              String numbers[] = substring.split(delimeter);
-              return addNumbers(numbers);
-          }
-          else if (text.contains("-")) {
-            String negative = checkNegative(text);
-            throw new IllegalArgumentException("Negatives not allowed: " + negative);
 
+              checkNegative(substring,delimeter);
+
+              return addNumbers(splitString(substring, delimeter));
           }
           else if (text.contains("\n") || text.contains(",")) {
-                String numbers[] = splitString(text);
-                return addNumbers(numbers);
+                checkNegative(text, "\n|,");
+                return addNumbers(splitString(text, "\n|,"));
           }
           else return toInt(text);
       }
 
-      public static String[] splitString(String text) {
-          String numbers[] = text.split("\n|,");
+      public static String[] splitString(String text, String delimeter) {
+          String numbers[] = text.split(delimeter);
           return numbers;
       }
 
-      public static String checkNegative(String text) {
-          String numbers[] = splitString(text);
-          String negative = "";
-          for (String number : numbers) {
-              if (number.contains("-")) {
-                  negative = negative + number +",";
-              }
-          }
-          if (negative.endsWith(", ")) {
-                negative = negative.substring(0, negative.length() - 2);
+      public static void checkNegative(String text, String delimeter) {
+
+          if (text.contains("-")) {
+            String numbers[] = splitString(text, delimeter);
+            String negative = "";
+            for (String number : numbers) {
+                if (number.contains("-")) {
+                    negative = negative + number +", ";
+                }
+            }
+            negative = negative.substring(0, negative.length() - 2);
+            System.out.println("Negatives not allowed: " + negative);
+            throw new IllegalArgumentException("Negatives not allowed: " + negative);
+
           }
 
-          return negative;
       }
 
       public static int toInt(String integer) {
@@ -62,7 +62,6 @@ public class Calculator {
           for (String number : numbers) {
               sum = sum + toInt(number);
           }
-          System.out.println(sum);
           return sum;
       }
 }

@@ -54,7 +54,7 @@ public class CalculatorTest {
 
       @Test
       public void testDelimeter(){
-          assertEquals(6,Calculator.add("//rip--\n1rip--5"));
+          assertEquals(6,Calculator.add("//rip\n1rip5"));
       }
 
 
