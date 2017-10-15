@@ -39,8 +39,18 @@ public class CalculatorTest {
       @Test(expected = IllegalArgumentException.class)
       public void testNegative() {
           Calculator.add("-2,2,-3");
+          Calculator.add("-1");
       }
 
+      @Test
+      public void testBigNumber() {
+          assertEquals(0, Calculator.add("1001"));
+      }
+
+      @Test
+      public void testBigNumbers() {
+          assertEquals(5, Calculator.add("1001,2,3"));
+      }
 
 
 

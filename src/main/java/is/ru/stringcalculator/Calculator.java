@@ -39,7 +39,14 @@ public class Calculator {
       }
 
       public static int toInt(String integer) {
-          return Integer.parseInt(integer);
+
+          int num = Integer.parseInt(integer);
+          if (num > 1000) {
+              return 0;
+          }
+
+          return num;
+
       }
 
       public static int addNumbers(String [] numbers) {

@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="is.ru.stringcalculator.CalculatorTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2017-10-13T16:51:28" hostname="SurfaceBook" time="0.005">
+<testsuite name="is.ru.stringcalculator.CalculatorTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2017-10-15T16:23:42" hostname="SurfaceBook" time="0.004">
   <properties/>
   <testcase name="testAddNumbers" classname="is.ru.stringcalculator.CalculatorTest" time="0.002"/>
+  <testcase name="testBigNumbers" classname="is.ru.stringcalculator.CalculatorTest" time="0.0"/>
   <testcase name="testAddMoreNumbers" classname="is.ru.stringcalculator.CalculatorTest" time="0.0"/>
   <testcase name="testEmptyString" classname="is.ru.stringcalculator.CalculatorTest" time="0.0"/>
   <testcase name="testNewLineAndComma" classname="is.ru.stringcalculator.CalculatorTest" time="0.0"/>
   <testcase name="testNewLine" classname="is.ru.stringcalculator.CalculatorTest" time="0.0"/>
+  <testcase name="testBigNumber" classname="is.ru.stringcalculator.CalculatorTest" time="0.0"/>
   <testcase name="testNegative" classname="is.ru.stringcalculator.CalculatorTest" time="0.0"/>
-  <testcase name="testOneNumber" classname="is.ru.stringcalculator.CalculatorTest" time="0.001"/>
+  <testcase name="testOneNumber" classname="is.ru.stringcalculator.CalculatorTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
