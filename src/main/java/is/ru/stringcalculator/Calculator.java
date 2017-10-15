@@ -6,6 +6,13 @@ public class Calculator {
           if (text.equals("")) {
               return 0;
           }
+          else if (text.contains("//")) {
+              int index = text.indexOf("\n");
+              String delimeter = text.substring(2,index);
+              String substring = text.substring(index + 1);
+              String numbers[] = substring.split(delimeter);
+              return addNumbers(numbers);
+          }
           else if (text.contains("-")) {
             String negative = checkNegative(text);
             throw new IllegalArgumentException("Negatives not allowed: " + negative);
@@ -55,6 +62,7 @@ public class Calculator {
           for (String number : numbers) {
               sum = sum + toInt(number);
           }
+          System.out.println(sum);
           return sum;
       }
 }
